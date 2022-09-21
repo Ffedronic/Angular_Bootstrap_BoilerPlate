@@ -11,6 +11,7 @@
             id="name"
             aria-describedby="emailHelp"
             placeholder="Enter name"
+            #nameInput
           />
         </div>
         <div class="col-sm-2 form-group">
@@ -21,13 +22,14 @@
             name="amount"
             id="amount"
             placeholder="Enter amount"
+            #amountInput
           />
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-success me-2">Add</button>
-          <button type="button" class="btn btn-danger me-2">Delete</button>
+          <button type="submit" class="btn btn-success me-2" (click)="onAdd()" >Add</button>
+          <button type="button" class="btn btn-danger me-2" >Delete</button>
           <button type="button" class="btn btn-primary me-2">Clear</button>
         </div>
       </div>
