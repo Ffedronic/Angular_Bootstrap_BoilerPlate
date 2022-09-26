@@ -1,6 +1,10 @@
 <div class="row border border-2 border-black">
   <div class="col-sx-12">
-    <img src="{{ selectedRecipe.imagePath }}" alt="{{selectedRecipe.name}}" class="img-fluid" />
+    <img
+      src="{{ selectedRecipe.imagePath }}"
+      alt="{{ selectedRecipe.name }}"
+      class="img-fluid"
+    />
   </div>
 </div>
 <div class="row">
@@ -30,8 +34,17 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12"> {{selectedRecipe.description}} </div>
+  <div class="col-xs-12">{{ selectedRecipe.description }}</div>
 </div>
 <div class="row">
-  <div class="col-xs-12">Ingredients</div>
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of selectedRecipe.ingredients"
+      >
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
 </div>
