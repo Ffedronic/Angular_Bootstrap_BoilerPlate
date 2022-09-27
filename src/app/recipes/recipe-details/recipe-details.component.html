@@ -1,8 +1,8 @@
 <div class="row mt-lg-1">
   <div class="col-sx-12">
-    <div class="card mx-auto" style="width: 75%;">
+    <div class="card mx-auto" style="width: 75%">
       <img
-      style="max-height: 600px;"
+        style="max-height: 600px"
         class="card-img-top"
         src="{{ selectedRecipe.imagePath }}"
         alt="{{ selectedRecipe.name }}"
@@ -24,8 +24,8 @@
       <div class="card-footer">
         <div class="dropdown">
           <button
+            style="cursor: pointer"
             class="btn btn-primary dropdown-toggle"
-            href="#"
             id="navbarDropdown"
             role="button"
             data-bs-toggle="dropdown"
@@ -42,64 +42,15 @@
                 >To Shopping List</a
               >
             </li>
-            <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-            <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+            <li>
+              <a class="dropdown-item" style="cursor: pointer">Edit Recipe</a>
+            </li>
+            <li>
+              <a class="dropdown-item" style="cursor: pointer">Delete Recipe</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- <img
-  src="{{ selectedRecipe.imagePath }}"
-  alt="{{ selectedRecipe.name }}"
-  class="img-fluid"
-/>
-<div class="row">
-  <div class="col-xs-12">
-    <h1>{{ selectedRecipe.name }}</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <div class="dropdown">
-      <button
-        class="btn btn-primary dropdown-toggle"
-        href="#"
-        id="navbarDropdown"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Manage Recipe
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li>
-          <a
-            class="dropdown-item"
-            style="cursor: pointer"
-            (click)="onAddToShoppingList()"
-            >To Shopping List</a
-          >
-        </li>
-        <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">{{ selectedRecipe.description }}</div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let ingredient of selectedRecipe.ingredients"
-      >
-        {{ ingredient.name }} - {{ ingredient.amount }}
-      </li>
-    </ul>
-  </div>
-</div> -->
