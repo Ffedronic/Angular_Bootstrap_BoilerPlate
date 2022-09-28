@@ -34,9 +34,28 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-success me-2" [disabled]="!shoppingListFormGroup.valid" >Add</button>
-          <button type="button" class="btn btn-danger me-2">Delete</button>
-          <button type="button" class="btn btn-primary me-2">Clear</button>
+          <button
+            type="submit"
+            class="btn btn-success me-2"
+            [disabled]="!shoppingListFormGroup.valid"
+          >
+            {{ editMode ? "Update" : "Add" }}
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger me-2"
+            (click)="onDelete()"
+            *ngIf="editMode"
+          >
+            Delete
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary me-2"
+            (click)="onClear()"
+          >
+            Clear
+          </button>
         </div>
       </div>
     </form>
