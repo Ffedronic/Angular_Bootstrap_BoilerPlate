@@ -8,22 +8,29 @@ import { Subject } from 'rxjs';
 export class RecipeServices {
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [
-    new Recipe(
-      'A test Recipe',
-      'A simply test Recipe',
-      'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2015/11/shakshuka-11.jpg',
-      [new Ingredient('Eggs', 10), new Ingredient('Tomatoes', 3)]
-    ),
-    new Recipe(
-      'A test Recipe',
-      'A simply test Recipe',
-      'https://img.freepik.com/premium-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000',
-      [new Ingredient('Eggs', 10), new Ingredient('Tomatoes', 3)]
-    ),
-  ];
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'A test Recipe',
+  //     'A simply test Recipe',
+  //     'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2015/11/shakshuka-11.jpg',
+  //     [new Ingredient('Eggs', 10), new Ingredient('Tomatoes', 3)]
+  //   ),
+  //   new Recipe(
+  //     'A test Recipe',
+  //     'A simply test Recipe',
+  //     'https://img.freepik.com/premium-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000',
+  //     [new Ingredient('Eggs', 10), new Ingredient('Tomatoes', 3)]
+  //   ),
+  // ];
+
+  private recipes: Recipe[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {}
+
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
 
   getRecipes() {
     return this.recipes.slice();
@@ -38,7 +45,7 @@ export class RecipeServices {
   }
 
   addRecipe(newRecipe: Recipe) {
-    console.log(newRecipe.ingredients)
+    console.log(newRecipe.ingredients);
     this.recipes.push(newRecipe);
     this.recipesChanged.next(this.recipes.slice());
   }
