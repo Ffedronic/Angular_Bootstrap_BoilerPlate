@@ -19,6 +19,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { DataStorageService } from './shared/dataStorage.service';
 import { RecipeServices } from './recipes/recipes.services';
 import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AuthComponent } from './auth/auth.component';
     RecipeServices,
     DataStorageService,
     RecipesResolverService,
+    AuthService
   ],
   bootstrap: [AppComponent],
 })
