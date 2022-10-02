@@ -1,3 +1,4 @@
+import { AuthService } from './../auth/auth.service';
 import { Recipe } from './../recipes/recipe.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -44,6 +45,6 @@ export class DataStorageService {
         tap((recipes) => {
           this.recipeService.setRecipes(recipes);
         })
-      )
+      );
   }
 }
