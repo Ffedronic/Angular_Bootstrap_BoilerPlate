@@ -1,3 +1,4 @@
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { RecipesResolverService } from './recipes/recipes.resolver.service';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -34,6 +35,7 @@ import { AuthService } from './auth/auth.service';
     RecipeStartComponent,
     RecipeEditComponent,
     AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
