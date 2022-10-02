@@ -31,7 +31,7 @@
         </div>
         <ul class="d-lg-flex list-unstyled align-items-center" *ngIf="isAuthenticated">
           <li class="me-lg-2">
-            <a style="cursor: pointer">Logout</a>
+            <a style="cursor: pointer" (click)="onLogout()" >Logout</a>
           </li>
           <li class="nav-item dropdown">
             <a

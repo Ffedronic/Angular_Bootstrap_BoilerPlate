@@ -1,3 +1,4 @@
+import { AuthGard } from './auth/auth-gard.service';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { RecipesResolverService } from './recipes/recipes.resolver.service';
@@ -51,6 +52,7 @@ import { AuthService } from './auth/auth.service';
     DataStorageService,
     RecipesResolverService,
     AuthService,
+    AuthGard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,
