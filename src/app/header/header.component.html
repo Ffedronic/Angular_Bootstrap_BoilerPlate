@@ -17,10 +17,10 @@
         class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-between"
       >
         <div class="d-lg-flex">
-          <li class="nav-item" routerLinkActive="active">
+          <li class="nav-item" routerLinkActive="active" *ngIf="!isAuthenticated">
             <a class="nav-link" routerLink="/auth">Authenticate</a>
           </li>
-          <li class="nav-item" routerLinkActive="active">
+          <li class="nav-item" routerLinkActive="active" *ngIf="isAuthenticated">
             <a class="nav-link" aria-current="page" routerLink="/recipes"
               >Recipes</a
             >
@@ -29,7 +29,10 @@
             <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
           </li>
         </div>
-        <div>
+        <ul class="d-lg-flex list-unstyled align-items-center" *ngIf="isAuthenticated">
+          <li class="me-lg-2">
+            <a style="cursor: pointer">Logout</a>
+          </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -43,14 +46,24 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a class="dropdown-item" style="cursor: pointer" (click)="onStore()" >Save Data</a>
+                <a
+                  class="dropdown-item"
+                  style="cursor: pointer"
+                  (click)="onStore()"
+                  >Save Data</a
+                >
               </li>
               <li>
-                <a class="dropdown-item" style="cursor: pointer" (click)="onFetch()" >Fetch Data</a>
+                <a
+                  class="dropdown-item"
+                  style="cursor: pointer"
+                  (click)="onFetch()"
+                  >Fetch Data</a
+                >
               </li>
             </ul>
           </li>
-        </div>
+        </ul>
       </ul>
     </div>
   </div>
