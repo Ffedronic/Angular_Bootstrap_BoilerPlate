@@ -152,6 +152,7 @@ export class AuthService {
         break;
     }
 
+    console.log(errorRes.error.error);
     return throwError(() => new Error(errorMessage));
   }
 }

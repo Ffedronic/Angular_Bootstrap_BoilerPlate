@@ -3,12 +3,12 @@
     <div class="text-center" *ngIf="isLoading">
       <app-loading-spinner></app-loading-spinner>
     </div>
-    <ng-template appPlaceholder></ng-template>
-    <!-- <app-alert
+    <!-- <ng-template appPlaceholder></ng-template> -->
+    <app-alert
       [message]="error"
       *ngIf="error"
       (close)="onHandleError()"
-    ></app-alert> -->
+    ></app-alert>
     <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
       <div class="form-group mb-3">
         <label for="InputEmail">Email</label>
