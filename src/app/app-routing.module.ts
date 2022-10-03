@@ -1,10 +1,8 @@
 import { AuthComponent } from './auth/auth.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 const appRoutes: Routes = [
-  { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'auth', component: AuthComponent },
 
   /**
