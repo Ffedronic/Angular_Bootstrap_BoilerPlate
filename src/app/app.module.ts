@@ -23,6 +23,7 @@ import { DataStorageService } from './shared/dataStorage.service';
 import { RecipeServices } from './recipes/recipes.services';
 import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './auth/auth.service';
+import { AlertComponent } from './shared/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AuthService } from './auth/auth.service';
     RecipeEditComponent,
     AuthComponent,
     LoadingSpinnerComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

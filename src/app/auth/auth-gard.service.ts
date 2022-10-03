@@ -7,7 +7,7 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { map, Observable, take, tap } from 'rxjs';
+import { map, Observable, take } from 'rxjs';
 
 @Injectable()
 export class AuthGard implements CanActivate {
