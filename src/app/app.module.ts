@@ -17,6 +17,7 @@ import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './auth/auth.service';
 import { RecipesModule } from './recipes/recipes.module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core.module';
 
 @NgModule({
   declarations: [
@@ -33,20 +34,9 @@ import { SharedModule } from './shared/shared.module';
     RecipesModule,
     ShoppingListModule,
     SharedModule,
+    CoreModule
   ],
-  providers: [
-    ShoppingListService,
-    RecipeServices,
-    DataStorageService,
-    RecipesResolverService,
-    AuthService,
-    AuthGard,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptorService,
-      multi: true,
-    },
-  ],
+  
   bootstrap: [AppComponent],
 })
 export class AppModule {}
